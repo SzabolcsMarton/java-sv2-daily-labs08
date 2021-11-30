@@ -15,7 +15,7 @@ public class NumberSequence {
     public NumberSequence(int min, int max , int pieces){
         Random rnd = new Random();
         for(int i = 0; i < pieces; i++){
-            numbers.add(rnd.nextInt(numbers.get(0), numbers.get(1) + 1));
+            numbers.add(rnd.nextInt(min, max + 1));
         }
     }
 
@@ -38,4 +38,7 @@ public class NumberSequence {
         return sum / numbers.size();
     }
 
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
 }

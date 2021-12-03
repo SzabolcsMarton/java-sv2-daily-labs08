@@ -43,8 +43,8 @@ public class fileReader {
         int minDifference = Integer.MAX_VALUE;
         for (String actual : lines) {
             try {
-                int f = Integer.parseInt(actual.substring(44, 46).trim());
-                int a = Integer.parseInt(actual.substring(51, 53).trim());
+                int f = Integer.parseInt(actual.substring(43, 45).trim());
+                int a = Integer.parseInt(actual.substring(50, 52).trim());
                 if (f - a < minDifference) {
                     minDifference = f - a;
                     result = actual.substring(7,22);
@@ -71,8 +71,8 @@ public class fileReader {
     }
 
     public static void main(String[] args) {
-        int min = new fileReader().findSmallestTemperatureSpread("weather.dat");
-        System.out.println(min);
+//        int min = new fileReader().findSmallestTemperatureSpread("weather.dat");
+//        System.out.println(min);
 
         String winner = new fileReader().findSmallestDifference("football.dat");
         System.out.println(winner);
